@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}
+        Base Web Page
+        {% endblock  %}</title>
+</head>
+<style>
+    *{
+    background-color: black;
+    color: white;
+}
+#App_Name{
+    text-align: center;
+    color: #def99a;
+}
+#footer{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin-bottom: 12px;
+    margin-left: 610px;
+}
+#sign_up_form{
+    text-align: center;
+}
+#Login_form{
+    text-align: center;
+}
+#Home_page{
+    text-align: center;
+}
+#image_size{
+    height: 250px;
+}
+</style>
+<body>
+    <header><h1 id="App_Name">Fibonacci Visualizer</h1>
+        {% block header %}
+        
+        {% endblock  %}    
+    </header>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+
+            {% for category , msg in messages %}
+            <p> <span style="color: darkred;"> {{msg}} </span></p>
+            {% endfor %}
+
+    {% endif %}        
+    {% endwith %}
+        {% block content %}
+              
+        {% endblock %}
+    <footer id="footer">
+        <pre>
+            Rajwinder Singh
+            Reg No 72513006
+            Semester-1
+            BCA(AI)
+        </pre>
+    </footer>
+</body>
+</html>

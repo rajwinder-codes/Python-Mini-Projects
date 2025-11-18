@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+Home Page
+{% endblock %} 
+{% block header %}
+<h2>Home</h2>
+{% endblock %}
+{% block content %}
+<form method="POST" action="/Home" id="Home_page">
+Enter how many terms you want::<br><br>
+<input type="text" name="User_Input"><br><br>
+<input type="submit" value="Enter">
+</form>
+{% endblock %}
