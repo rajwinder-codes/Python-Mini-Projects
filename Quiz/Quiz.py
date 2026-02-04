@@ -43,3 +43,4 @@ while True:
         print(f"Your Total Score: {score} / {len(questions)}")    
     else:
         print("Error Try Again")
+
